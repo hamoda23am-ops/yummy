@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover meals from around the world with Meals App.">
+    <title>Meals App | Discover Your Next Meal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a class="brand" href="#" aria-label="Meals App home">
+                <span class="brand-icon">🍽️</span>
+                <span>Meals<span class="brand-accent">App</span></span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#categories">Categories</a>
+                <a href="#areas">Areas</a>
+                <a href="#meals">Meals</a>
+            </nav>
+            <button class="button button-small button-outline" id="randomBtn" type="button">
+                Surprise me <span aria-hidden="true">↗</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <p class="eyebrow">A world of flavor</p>
+                <h1>Find your next<br><span>favorite meal.</span></h1>
+                <p class="hero-description">Explore recipes, discover cuisines, and find something delicious to cook today.</p>
+                <a class="button hero-button" href="#search">Explore recipes <span aria-hidden="true">↓</span></a>
+                <div class="hero-decoration hero-decoration-one" aria-hidden="true">✳</div>
+                <div class="hero-decoration hero-decoration-two" aria-hidden="true">✦</div>
+            </div>
+        </section>
+
+        <section class="search-section" id="search">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Find something delicious</p>
+                        <h2>Search recipes</h2>
+                    </div>
+                    <p class="section-subtitle">Search by meal name, first letter, or ingredient.</p>
+                </div>
+
+                <div class="search-panel">
+                    <form id="searchForm" class="search-control search-main">
+                        <label class="sr-only" for="searchInput">Search by meal name</label>
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+                        <input type="search" id="searchInput" placeholder="What are you craving?" autocomplete="off">
+                        <button class="button" id="searchBtn" type="submit">Search</button>
+                    </form>
+
+                    <form id="letterForm" class="search-control compact-search">
+                        <label class="sr-only" for="letterInput">Search by first letter</label>
+                        <input type="text" id="letterInput" maxlength="1" placeholder="First letter">
+                        <button class="button button-dark" type="submit">Find</button>
+                    </form>
+
+                    <form id="ingredientForm" class="search-control compact-search">
+                        <label class="sr-only" for="ingredientInput">Search by ingredient</label>
+                        <input type="search" id="ingredientInput" placeholder="Ingredient (e.g. chicken)">
+                        <button class="button button-dark" id="ingredientBtn" type="submit">Find</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="categories">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Choose your craving</p>
+                        <h2>Browse categories</h2>
+                    </div>
+                    <p class="section-subtitle">Pick a category to see its meals.</p>
+                </div>
+                <div id="categoriesContainer" class="category-grid" aria-live="polite">
+                    <p class="loading-message">Loading categories...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section areas-section" id="areas">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Taste the world</p>
+                        <h2>Explore by cuisine</h2>
+                    </div>
+                    <p class="section-subtitle">Choose a country or region to explore its food.</p>
+                </div>
+                <div id="areaContainer" class="area-grid" aria-live="polite">
+                    <p class="loading-message">Loading cuisines...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section meals-section" id="meals">
+            <div class="container">
+                <div class="section-heading meals-heading">
+                    <div>
+                        <p class="eyebrow">Recipes for you</p>
+                        <h2 id="mealsTitle">Discover meals</h2>
+                    </div>
+                    <p class="section-subtitle" id="mealsSubtitle">Search or choose a category or cuisine to get started.</p>
+                </div>
+                <div id="mealsContainer" class="meal-grid" aria-live="polite">
+                    <div class="empty-state">
+                        <span class="empty-icon" aria-hidden="true">🥘</span>
+                        <h3>Your next meal is waiting</h3>
+                        <p>Search for a recipe or select a category or cuisine above.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a class="brand footer-brand" href="#">
+                <span class="brand-icon">🍽️</span>
+                <span>Meals<span class="brand-accent">App</span></span>
+            </a>
+            <p>Discover something delicious, every day.</p>
+            <p class="footer-credit">Recipe data provided by <a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">TheMealDB</a>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
